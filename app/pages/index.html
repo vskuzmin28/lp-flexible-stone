@@ -1,34 +1,5 @@
 
-<header class="header">
-  <div class="container">
-    <div class="row header__row">
-      <div class="burger"><span></span><span></span><span></span></div>
-      <div class="col-lg-3 col-md-3"><a class="header__logo logo" href="#" title="">
-          <svg class="icon logo__icon">
-            <use xlink:href="../img/sprite/sprite.svg#car"></use>
-          </svg>
-          <div class="logo__content">
-            <p class="logo__title">БТ-ремонт</p>
-            <p class="logo__desc">Выездной сервис по ремонту крупной бытовой техники</p>
-          </div></a></div>
-      <div class="col-lg-6 col-md-12">
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item"><a href="#services" title="">Услуги и цены</a></li>
-            <li class="header__nav-item"><a href="#about" title="">О компании</a></li>
-            <li class="header__nav-item"><a href="#masters" title="">Мастера</a></li>
-            <li class="header__nav-item"><a href="#reviews" title="">Отзывы</a></li>
-            <li class="header__nav-item"><a href="#map" title="">Контакты</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="col-lg-3 col-md-12 d-flex justify-content-end"><a class="header__button button button_orange button_shadow-light linkCall" href="#" title="">Связаться с нами</a><a class="header__button-call" href="tel:9999999999"> 
-          <svg class="icon">
-            <use xlink:href="../img/sprite/sprite.svg#telephone"></use>
-          </svg>8 800 555 3535</a></div>
-    </div>
-  </div>
-</header><!DOCTYPE html>
+<!--include ../blocks/contacts/contacts--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8"/>
@@ -51,6 +22,70 @@
     <meta name="keywords" content=""/>
   </head>
   <body>
+    <!-- BEGIN MAIN-->
+    <section class="main">
+      <div class="main__container container">
+        <ul class="main__navigation">
+          <li class="main__navigation-item"><a class="main__navigation-active" href="#" title="">Продукция</a></li>
+          <li class="main__navigation-item"><a href="#" title="">Гибкий камень</a></li>
+          <li class="main__navigation-item"><a href="#" title="">О нас</a></li>
+          <li class="main__navigation-item"><a href="#" title="">Контакты</a></li>
+        </ul>
+        <ul class="main__socials">
+          <li class="main__socials-item"><a href="#" title="">
+              <svg class="icon main__socials-icon">
+                <use xlink:href="../img/sprite/sprite.svg#facebook"></use>
+              </svg></a></li>
+          <li class="main__socials-item"><a href="#" title="">
+              <svg class="icon main__socials-icon">
+                <use xlink:href="../img/sprite/sprite.svg#vk"></use>
+              </svg></a></li>
+          <li class="main__socials-item"><a href="#" title="">
+              <svg class="icon main__socials-icon">
+                <use xlink:href="../img/sprite/sprite.svg#instagram"></use>
+              </svg></a></li>
+        </ul>
+        <div class="row">
+          <div class="col-12">
+            <h2 class="main__title">Оригинальные интерьерные решения из гибкого камня</h2>
+          </div>
+        </div>
+        <div class="main__list row">
+          <div class="col-3"><a class="main__list-item" href="#" title="">
+              <svg class="icon main__list-icon">
+                <use xlink:href="../img/sprite/sprite.svg#durable"></use>
+              </svg>
+              <p class="main__list-content">Прочность и <br/> долговечность</p></a></div>
+          <div class="col-3"><a class="main__list-item" href="#" title="">
+              <svg class="icon main__list-icon">
+                <use xlink:href="../img/sprite/sprite.svg#firewall"></use>
+              </svg>
+              <p class="main__list-content">Влагостойкость и огнеустойчивость</p></a></div>
+          <div class="col-3"><a class="main__list-item" href="#" title="">
+              <svg class="icon main__list-icon">
+                <use xlink:href="../img/sprite/sprite.svg#nature"></use>
+              </svg>
+              <p class="main__list-content">Универсальность в отделке и экологичность</p></a></div>
+          <div class="col-3"><a class="main__list-item" href="#" title="">
+              <svg class="icon main__list-icon">
+                <use xlink:href="../img/sprite/sprite.svg#cold"></use>
+              </svg>
+              <p class="main__list-content">Высокая устойчивость к низким температурам</p></a></div>
+        </div>
+        <div class="main__form row">
+          <div class="col-12"><img class="main__form-gift" src="../img/gift.png" alt="@@"/>
+            <h3 class="main__form-title">Узнайте стоимость гибкого камня и получите подарок по сезонной акции!</h3>
+            <form class="main__form-body" action="/" metho="post">
+              <input type="text" name="name" placeholder="Ваше имя" required="required"/>
+              <input type="text" name="tel" placeholder="Ваш телефон" required="required"/>
+              <input type="submit" value="Получить подарок"/>
+            </form>
+            <p class="main__form-condition">Нажимая на кнопку “получить скидку” - вы даете согласие на обработку персональных данных.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END MAIN-->
     <!-- BEGIN POPUPS-->
     <section class="popup popupCall">
       <h2 class="popup__title">Есть вопросы? <br/>Свяжитесь с нами, мы Вам перезвоним!</h2><a class="popup__close" href="#" title="">

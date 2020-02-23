@@ -1,42 +1,59 @@
 mixin main(data)
     - data = data || {};
     section.main(class = data.class role = data.role)
-        .container
+        .main__container.container
+            ul.main__navigation
+                li.main__navigation-item
+                    a.main__navigation-active(href="#" title="") Продукция
+                li.main__navigation-item
+                    a(href="#" title="") Гибкий камень
+                li.main__navigation-item
+                    a(href="#" title="") О нас
+                li.main__navigation-item
+                    a(href="#" title="") Контакты
+            ul.main__socials
+                li.main__socials-item
+                    a(href="#" title="")
+                        svg.icon.main__socials-icon
+                            use(xlink:href="../img/sprite/sprite.svg#facebook")
+                li.main__socials-item
+                    a(href="#" title="")
+                        svg.icon.main__socials-icon
+                            use(xlink:href="../img/sprite/sprite.svg#vk")
+                li.main__socials-item
+                    a(href="#" title="")
+                        svg.icon.main__socials-icon
+                            use(xlink:href="../img/sprite/sprite.svg#instagram")
             .row
-                .col-lg-4
-                    h3.main__title Отремонтируем вашу технику уже сегодня!
-                    p.main__desc 90% неисправностей устраним в день обращения
-
-                    ul.main__list
-                        li.main__list-item
-                            svg.main__list-icon
-                                use(xlink:href="../img/sprite/sprite.svg#guarantee")
-                            | Гарантия сервисного центра до 3 лет
-                        li.main__list-item
-                            svg.main__list-icon
-                                use(xlink:href="../img/sprite/sprite.svg#user")
-                            | Выезд мастера в любую точку города
-                        li.main__list-item
-                            svg.main__list-icon
-                                use(xlink:href="../img/sprite/sprite.svg#settings")
-                            | Только оригинальные запчасти
-
-                    .main__order
-                        .main__order-block
-                            .row
-                                .col-lg-4
-                                    .main__order-box
-                                        h4.main__order-title Получите бесплатную консультацию по вашей неисправности
-                                        p.main__order-desc Наша техподдержка работает 24/7
-
-                                        .main__form
-                                            form.form(action="/" method="post")
-                                                input.form__input(name="phone" type="text" placeholder="Ваш телефон" required)
-                                                input.input-hidden(type="hidden" name='name' value='Бесплатная консультация')
-                                                input.button.button_orange.button_shadow.form__button.main__button(type="submit" value="Получить")
-                                .col-lg-8
-                .col-lg-8
-                    .main__kitchen
-                        img.main__kitchen-icebox.wow.fadeInRight(src="../img/icebox.png" alt="@@" data-wow-delay="0s")
-                        img.main__kitchen-master.wow.fadeIn(src="../img/kitchen-master.png" alt="@@" data-wow-delay="0.5s")
-                        img.main__kitchen-bg(src="../img/kitchen.jpg" alt="@@")
+                .col-12
+                    h2.main__title Оригинальные интерьерные решения из гибкого камня
+            .main__list.row
+                .col-3
+                    a.main__list-item(href="#" title="")
+                        svg.icon.main__list-icon
+                            use(xlink:href="../img/sprite/sprite.svg#durable")
+                        p.main__list-content Прочность и <br/> долговечность
+                .col-3
+                    a.main__list-item(href="#" title="")
+                        svg.icon.main__list-icon
+                            use(xlink:href="../img/sprite/sprite.svg#firewall")
+                        p.main__list-content Влагостойкость и огнеустойчивость
+                .col-3
+                    a.main__list-item(href="#" title="")
+                        svg.icon.main__list-icon
+                            use(xlink:href="../img/sprite/sprite.svg#nature")
+                        p.main__list-content Универсальность в отделке и экологичность
+                .col-3
+                    a.main__list-item(href="#" title="")
+                        svg.icon.main__list-icon
+                            use(xlink:href="../img/sprite/sprite.svg#cold")
+                        p.main__list-content Высокая устойчивость к низким температурам
+            .main__form.row
+                .col-12
+                    img.main__form-gift(src="../img/gift.png" alt="@@")
+                    h3.main__form-title Узнайте стоимость гибкого камня и получите подарок по сезонной акции!
+                    form.main__form-body(action="/" metho="post")
+                        input(type="text" name="name" placeholder="Ваше имя" required)
+                        input(type="text" name="tel" placeholder="Ваш телефон" required)
+                        input(type="submit" value="Получить подарок")
+                    p.main__form-condition Нажимая на кнопку “получить скидку” - вы даете согласие на обработку персональных данных.
