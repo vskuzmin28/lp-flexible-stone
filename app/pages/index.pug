@@ -1,0 +1,35 @@
+include ../blocks/head/head
+include ../blocks/contacts/contacts
+include ../blocks/popups/popups
+
+doctype html
+html(lang='ru')
+  +head({
+    title: 'Гибкие камни',
+    keywords: '',
+    description: ''
+  })
+  body
+
+    // BEGIN POPUPS
+
+    +popup({
+      class: 'popupCall',
+    })
+
+    +popupThanks
+
+    // END POPUPS
+
+    // htmlbuild:js 
+
+    script(src='../js/libs/jquery-3.4.1.min.js')
+    script(src='../js/libs/jquery.maskedinput.min.js')
+    script(src="../js/libs/svg4everybody.min.js")
+    script(src='../js/libs/jquery.bpopup.min.js')
+    script(src='../js/libs/swiper.js')
+
+    // endbuild 
+    script(src='../js/scripts.js')
+ 
+    // END SCRIPTS
