@@ -1,161 +1,152 @@
 // questions
 
 .questions {
-    margin-bottom: 42px;
+    background: url('../img/questions.jpg') no-repeat center;
+    background-size: cover;
+    height: 100%;
 
-    &__preview {
-        margin-top: -20px;
-        margin-left: 20px;
-
-        @media screen and (max-width: 991px) {
-            display: none;
-        }
-
-        @media screen and (max-width: 1340px) {
-            margin-top: 80px;
-            zoom: 0.65;
-        }
-
-        @media screen and (min-width: 1340px) {
-            margin-top: 80px;
-            zoom: 0.80;
-        }
-
+    &__container {
+        height: 100%;
     }
 
-    &__form {
-        margin-top: -2px;
-        margin-left: -2px;
+    &__content {
+        padding: 250px 0;
+
+        &-title {
+            margin: 0;
+            margin-left: 83px;
+            padding: 0;
+            font-size: 48px;
+            font-family: 'Circe';
+            font-weight: bold;
+            color: @white;
+        }
+
     }
 
     &__title {
-        margin: 58px 0 40px -2px;
-        font-family: 'Futura PT';
+        margin: 0;
+        margin: 81px 0 6px 0;
+        padding: 0;
         font-size: 32px;
-        text-transform: uppercase;
-        font-weight: 600;
-        color: @black;
-
-        @media screen and (max-width: 991px) {
-            margin: 24px 0;
-            height: auto;
-            text-align: center;
-        }
-
-        @media screen and (max-width: 1340px) {
-            margin-top: 48px;
-        }
-
+        font-family: 'Circe';
+        font-weight: bold;
+        color: @white;
     }
 
     &__desc {
-        margin-top: -2px;
-        margin-left: -2px;
-        margin-bottom: 76px;
-        font-family: 'Futura PT Book';
-        font-size: 16px;
-        color: @black;
+        margin: 0;
+        margin-bottom: 59px;
+        padding: 0;
+        font-size: 24px;
+        font-family: 'Circe';
+        font-weight: normal;
+        color: @white;
+    }
 
-        @media screen and (max-width: 991px) {
-            margin: 0 0 24px 0;
-            height: auto;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background: #e35858;
+        text-align: center;
+        color: @white;
+        -webkit-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+        -moz-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+        box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+
+        &-title {
+            margin: 0;
+            padding: 0;
+            width: 70%;
+            font-size: 32px;
+            font-family: 'Circe';
+            font-weight: 800;
+        }
+
+        &-desc {
+            margin: 0;
+            margin-bottom: 20px;
+            padding: 0;
+            width: 100%;
+            font-size: 16px;
+            font-family: 'Circe';
+            font-weight: normal;
             text-align: center;
         }
 
-        @media screen and (max-width: 1340px) {
-            margin: -30px 0 20px 0;
-        }
+        &-body {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0 25px;
 
-        span {
-            position: relative;
-            margin-bottom: 20px;
-            display: block;
-            font-family: 'Futura PT';
-            font-weight: 900;
-            color: @black;
-
-            @media screen and (max-width: 1340px) {
-                margin: 0px 0 20px 0;
+            input[type="text"] {
+                margin: 0 6px;
+                margin-bottom: 17px;
+                padding: 0 30px;
+                background: @white;
+                outline: 0;
+                border: 0;
+                border-radius: 25px;
+                height: 43px;
+                font-size: 14px;
+                font-family: 'Circe';
+                font-weight: normal;
+                color: @black;
             }
 
-            &::before {
-                top: 9px;
-                right: -160px;
-                position: absolute;
-                content: "";
-                width: 198px;
-                height: 2px;
-                background: @black;
-                z-index: 10;
-                display: none;
+            textarea {
+                margin: 0 6px;
+                margin-bottom: 42px;
+                padding: 30px 30px 0 30px;
+                background: @white;
+                outline: 0;
+                border: 0;
+                border-radius: 25px;
+                min-height: 85px;
+                font-size: 14px;
+                font-family: 'Circe';
+                font-weight: normal;
+                color: @black;
+                resize: none;
+                box-sizing: border-box;
+            }
 
-                @media screen and (max-width: 1200px) {
-                    display: none;
+            input[type="submit"] {
+                margin: 0 6px;
+                margin-bottom: 23px;
+                padding: 0 70px;
+                background: #0a0536;
+                outline: 0;
+                border: 0;
+                border-radius: 25px;
+                height: 43px;
+                font-size: 12px;
+                font-family: 'Montserrat';
+                font-weight: 800;
+                color: @white;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover {
+                    background: #120845;
                 }
 
             }
-
         }
 
-    }
-
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-
-    &__input, &__textarea {
-        border: 1px solid @gray;
-        font-family: 'Futura PT Demi';
-        font-size: 14px;
-        text-align: center;
-        color: @black;
-        outline: none;
-
-        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: @black;
-            opacity: 1; /* Firefox */
-        }
-          
-        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: @black;
-        }
-          
-        &::-ms-input-placeholder { /* Microsoft Edge */
-            color: @black;
+        &-condition {
+            margin: 0;
+            padding: 0;
+            width: 70%;
+            font-size: 12px;
+            font-family: 'Circe';
+            font-weight: normal;
         }
 
-    }
-
-    &__input {
-        padding: 0 10px;
-        margin-bottom: 9px;
-        width: 100%;
-        height: 46px;
-    }
-
-    &__textarea {
-        padding: 10px 10px;
-        margin-bottom: 9px;
-        height: 84px;
-        resize: none;
-        
-
-        &::-moz-placeholder { /* Mozilla Firefox 19+ */
-            line-height: 60px;
-        }
-        &::-webkit-input-placeholder { /* Webkit */
-            line-height: 60px;
-        }
-        &:-ms-input-placeholder { /* IE */
-            line-height: 60px;
-        }
-
-    }
-
-    &__button {
-        height: 48px !important;
     }
 
 }
