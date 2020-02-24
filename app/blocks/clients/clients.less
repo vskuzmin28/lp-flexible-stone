@@ -1,0 +1,187 @@
+// clients
+
+.clients {
+    background: url('../img/clients.jpg') no-repeat center;
+    background-size: cover;
+
+    &__title {
+        margin: 0;
+        margin: 81px 0 6px 0;
+        padding: 0;
+        font-size: 32px;
+        font-family: 'Circe';
+        font-weight: bold;
+        color: @white;
+    }
+
+    &__desc {
+        margin: 0;
+        margin-bottom: 59px;
+        padding: 0;
+        font-size: 24px;
+        font-family: 'Circe';
+        font-weight: normal;
+        color: @white;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .col-4, .col-8 {
+            margin-bottom: 30px;
+        }
+
+        .col-last {
+            margin-bottom: 91px;
+        }
+
+        &-item {
+            padding: 33px 0 50px 0;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: @white;
+            border-radius: 4px;
+            -webkit-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+            -moz-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+            box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+            transition: all 0.3s;
+
+            &:hover {
+                background: #e35858;
+
+                .clients__list-title {
+                    color: @white;
+                }
+
+            }
+
+            &_last {
+                flex-direction: row;
+                justify-content: center;
+
+                .clients__list-icon {
+                    margin-left: 64px;
+                    margin-right: 56px;
+                    margin-top: 30px;
+                    width: 150px;
+                    height: 50px;
+                }
+
+                .clients__list-title {
+                    text-align: left;
+                    margin-right: 9%;
+                    width: 100%;
+                }
+
+            }
+
+        }
+
+        &-icon {
+            margin-bottom: 22px;
+            width: 50px;
+            height: 50px;
+        }
+
+
+        &-title {
+            margin: 0 0 -20px 0;
+            padding: 0;
+            font-size: 16px;
+            font-family: 'Circe';
+            font-weight: normal;
+            color: #25313f;
+            text-align: center;
+        }
+
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background: #e35858;
+        text-align: center;
+        color: @white;
+        -webkit-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+        -moz-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+        box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+
+        &-title {
+            margin: 0;
+            padding: 0;
+            width: 70%;
+            font-size: 32px;
+            font-family: 'Circe';
+            font-weight: 800;
+        }
+
+        &-desc {
+            margin: 0;
+            margin-bottom: 38px;
+            padding: 0;
+            width: 70%;
+            font-size: 14px;
+            font-family: 'Circe';
+            font-weight: normal;
+        }
+
+        &-body {
+            input[type="text"] {
+                margin: 0 6px;
+                margin-bottom: 17px;
+                padding: 0 30px;
+                background: @white;
+                outline: 0;
+                border: 0;
+                border-radius: 25px;
+                height: 43px;
+                font-size: 14px;
+                font-family: 'Circe';
+                font-weight: normal;
+                color: @black;
+            }
+
+            input[type="submit"] {
+                margin: 0 6px;
+                margin-bottom: 34px;
+                padding: 0 70px;
+                background: #0a0536;
+                outline: 0;
+                border: 0;
+                border-radius: 25px;
+                height: 43px;
+                font-size: 12px;
+                font-family: 'Montserrat';
+                font-weight: 800;
+                color: @white;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover {
+                    background: #120845;
+                }
+
+            }
+        }
+
+        &-condition {
+            margin: 0;
+            padding: 0;
+            width: 70%;
+            font-size: 12px;
+            font-family: 'Circe';
+            font-weight: normal;
+        }
+
+    }
+
+}
