@@ -1,0 +1,104 @@
+// stages
+
+.stages {
+    padding: 83px 0 90px 0;
+    background: @white;
+    text-align: center;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 50px;
+        padding: 0;
+        font-size: 32px;
+        font-family: 'Circe';
+        font-weight: bold;
+        color: @black;
+    }
+
+    &__list {
+        margin: 0;
+        margin-bottom: 50px;
+        padding: 0;
+        list-style: none;
+
+        &-number {
+            font-size: 59px;
+            font-family: 'Circe';
+            font-weight: normal;
+            color: #e35858;
+        }
+
+        &-icon-body {
+            margin-top: -40px;
+            padding: 0px 58px 0 58px;
+            background: @white;
+            border-radius: 4px;
+            -webkit-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+            -moz-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+            box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+        }
+
+        &-item {
+            padding-top: 30px;
+            position: relative;
+            height: auto;
+            border-radius: 6px;
+
+            transition: all 0.3s;
+
+            .icon {
+                margin: 0 auto;
+                width: 56px;
+            }
+
+            .icon-right {
+                margin-left: -6px !important;
+            }
+
+            &:hover {
+                background: @white;
+                -webkit-box-shadow: 4px 0px 68px 0px rgba(0,0,0,0.29);
+                -moz-box-shadow: 4px 0px 68px 0px rgba(0,0,0,0.29);
+                box-shadow: 4px 0px 68px 0px rgba(0,0,0,0.29);
+
+                .stages__list-icon-body {
+                    margin-top: 0px;
+                    box-shadow: none;
+                }
+
+                .icon {
+                    margin: -40px 0 0 0;
+                }
+
+            }
+
+        }
+
+        &-link {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            img {
+                margin: 0;
+                display: block;
+                border: 0;
+                border-radius: 6px 6px 0 0;
+            }
+
+        }
+
+        &-title {
+            margin: 27px 0 37px 0;
+            font-size: 16px;
+            font-family: 'Circe';
+            font-weight: normal;
+            color: @black;
+        }
+
+    }
+}

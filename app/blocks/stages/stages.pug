@@ -1,0 +1,60 @@
+mixin stages(data)
+    - data = data || {};
+    section.stages(class = data.class role = data.role)
+        .stages__container.container
+            h3.stages__title Этапы работы с нами
+            .row
+                .col-12
+                    
+                    ul.stages__list
+                        .row
+                            .col-2
+                                li.stages__list-item
+                                    .stages__list-link
+                                        .stages__list-number 01
+                                        .stages__list-icon-body
+                                            svg.icon
+                                                use(xlink:href="../img/sprite/sprite.svg#question")
+                                        p.stages__list-title Оставьте <br/> заявку на сайте
+                            .col-2
+                                li.stages__list-item
+                                    .stages__list-link
+                                        .stages__list-number 02
+                                        .stages__list-icon-body
+                                            svg.icon.icon-right
+                                                use(xlink:href="../img/sprite/sprite.svg#call")
+                                        p.stages__list-title Получите <br/> профессиональную консультацию
+                            .col-2
+                                li.stages__list-item
+                                    .stages__list-link
+                                        .stages__list-number 03
+                                        .stages__list-icon-body
+                                            svg.icon
+                                                use(xlink:href="../img/sprite/sprite.svg#cost")
+                                        p.stages__list-title Мы рассчитаем <br/> стоимость для Вас
+                            .col-2
+                                li.stages__list-item
+                                    .stages__list-link
+                                        .stages__list-number 04
+                                        .stages__list-icon-body
+                                            svg.icon
+                                                use(xlink:href="../img/sprite/sprite.svg#order")
+                                        p.stages__list-title Заказ <br/> оформлен
+
+                            .col-2
+                                li.stages__list-item
+                                    .stages__list-link
+                                        .stages__list-number 05
+                                        .stages__list-icon-body
+                                            svg.icon.icon-right
+                                                use(xlink:href="../img/sprite/sprite.svg#plastic")
+                                        p.stages__list-title Производство <br/> завершено
+
+                            .col-2
+                                li.stages__list-item
+                                    .stages__list-link
+                                        .stages__list-number 06
+                                        .stages__list-icon-body
+                                            svg.icon.icon-right
+                                                use(xlink:href="../img/sprite/sprite.svg#tracking")
+                                        p.stages__list-title Мы рассчитаем <br/> стоимость для Вас

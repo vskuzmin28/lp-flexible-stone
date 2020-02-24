@@ -1830,6 +1830,97 @@ body *::selection {
   font-family: 'Circe';
   font-weight: normal;
 }
+.stages {
+  padding: 83px 0 90px 0;
+  background: #fff;
+  text-align: center;
+}
+.stages__title {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  font-size: 32px;
+  font-family: 'Circe';
+  font-weight: bold;
+  color: #000;
+}
+.stages__list {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  list-style: none;
+}
+.stages__list-number {
+  font-size: 59px;
+  font-family: 'Circe';
+  font-weight: normal;
+  color: #e35858;
+}
+.stages__list-icon-body {
+  margin-top: -40px;
+  padding: 0px 58px 0 58px;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 0px 21px 0px rgba(0, 0, 0, 0.29);
+  box-shadow: 4px 0px 21px 0px rgba(0, 0, 0, 0.29);
+}
+.stages__list-item {
+  padding-top: 30px;
+  position: relative;
+  height: auto;
+  border-radius: 6px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.stages__list-item .icon {
+  margin: 0 auto;
+  width: 56px;
+}
+.stages__list-item .icon-right {
+  margin-left: -6px !important;
+}
+.stages__list-item:hover {
+  background: #fff;
+  -webkit-box-shadow: 4px 0px 68px 0px rgba(0, 0, 0, 0.29);
+  box-shadow: 4px 0px 68px 0px rgba(0, 0, 0, 0.29);
+}
+.stages__list-item:hover .stages__list-icon-body {
+  margin-top: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.stages__list-item:hover .icon {
+  margin: -40px 0 0 0;
+}
+.stages__list-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+}
+.stages__list-link:hover {
+  text-decoration: none;
+}
+.stages__list-link img {
+  margin: 0;
+  display: block;
+  border: 0;
+  border-radius: 6px 6px 0 0;
+}
+.stages__list-title {
+  margin: 27px 0 37px 0;
+  font-size: 16px;
+  font-family: 'Circe';
+  font-weight: normal;
+  color: #000;
+}
 .stone {
   padding-top: 80px;
   background: #fff;
