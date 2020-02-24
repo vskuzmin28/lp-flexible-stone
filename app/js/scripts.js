@@ -46,8 +46,8 @@ $(document).scroll(function () {
     //initialize swiper when document ready
     let mySwiper = new Swiper ('.swiper-container', {
       // Optional parameters
-      slidesPerView: 2,
-      spaceBetween: 20,
+      slidesPerView: 1,
+      spaceBetween: 0,
       autoHeight: true,
       loop: true,
       pagination: {
@@ -67,10 +67,10 @@ $(document).scroll(function () {
           slidesPerView: 1,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 1,
         },
         1024: {
-          slidesPerView: 2,
+          slidesPerView: 1,
         },
 
       },
@@ -131,10 +131,6 @@ $('.send-form').submit(function() {
   }, 'json');
   return false;
 })
-
-/* wow animation */
-
-new WOW().init();
 
 // popup
 

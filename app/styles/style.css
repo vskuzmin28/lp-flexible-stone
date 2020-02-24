@@ -1661,6 +1661,129 @@ body *::selection {
 .form__button {
   height: 48px !important;
 }
+.stone {
+  padding-top: 80px;
+  background: #fff;
+}
+.stone__title {
+  margin: 0;
+  margin-bottom: 0px;
+  padding: 0;
+  font-size: 32px;
+  font-family: 'Circe';
+  font-weight: bold;
+  text-align: center;
+}
+.stone__desc {
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0;
+  font-size: 24px;
+  font-family: 'Circe';
+  font-weight: normal;
+  text-align: center;
+}
+.stone__about {
+  padding: 50px 68px;
+  background: #f2f7f9;
+}
+.stone__about-title {
+  margin: 0;
+  padding: 0;
+  font-size: 19px;
+  font-family: 'Circe';
+  font-weight: bold;
+}
+.stone__about-desc {
+  margin: 0;
+  margin-top: 26px;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Circe';
+  font-weight: normal;
+}
+.stone .swiper-container {
+  margin-bottom: 30px;
+}
+.stone .swiper-button-next {
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: 0;
+  background: #e35858;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.stone .swiper-button-next .icon {
+  top: 14px;
+  left: 17px;
+  position: absolute;
+  width: 10px;
+  height: 17px;
+  fill: #fff;
+}
+.stone .swiper-button-next:after {
+  content: "";
+}
+.stone .swiper-button-next:hover {
+  background: #fff;
+}
+.stone .swiper-button-next:hover .icon {
+  fill: #e35858;
+}
+.stone .swiper-button-prev {
+  left: 30px;
+  width: 45px;
+  height: 45px;
+  background: 0;
+  background: #e35858;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.stone .swiper-button-prev .icon {
+  top: 14px;
+  left: 15px;
+  position: absolute;
+  width: 10px;
+  height: 17px;
+  fill: #fff;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.stone .swiper-button-prev:after {
+  content: "";
+}
+.stone .swiper-button-prev:hover {
+  background: #fff;
+}
+.stone .swiper-button-prev:hover .icon {
+  fill: #e35858;
+}
+.stone .swiper-pagination {
+  bottom: 30px !important;
+}
+.stone .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  border: 2px solid #fff;
+  background: 0;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.stone .swiper-pagination-bullet:hover {
+  background: #fff;
+}
+.stone .swiper-pagination-bullet-active {
+  background: #d2cfce;
+  border-color: #d2cfce;
+}
 /*
 LESS variables are information about icon's compiled state, stored under its original file name
 
