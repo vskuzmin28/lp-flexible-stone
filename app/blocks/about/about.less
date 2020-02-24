@@ -1,0 +1,149 @@
+// about
+
+.about {
+    padding-top: 80px;
+    background: @white;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 0px;
+        padding: 0;
+        font-size: 32px;
+        font-family: 'Circe';
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__content {
+        padding: 109px 68px 98px;
+        background: #f2f7f9;
+        height: 92.5%;
+
+        &-title {
+            margin: 0;
+            padding: 0;
+            font-size: 19px;
+            font-family: 'Circe';
+            font-weight: bold;
+        }
+
+        &-desc {
+            margin: 0;
+            margin-top: 26px;
+            padding: 0;
+            font-size: 16px;
+            font-family: 'Circe';
+            font-weight: normal;
+        }
+
+    }
+
+    .swiper-container {
+        margin-bottom: 30px;
+    }
+
+}
+
+.about .swiper-button-next {
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: 0;
+    background: #e35858;
+    border-radius: 4px;
+    transition: all 0.3s;
+
+    .icon {
+        top: 14px;
+        left: 17px;
+        position: absolute;
+        width: 10px;
+        height: 17px;
+        fill: @white;
+    }
+
+    &:after {
+        content: "";
+    }
+
+    &:hover {
+        background: @white;
+
+        .icon {
+            fill: #e35858;
+        }
+
+    }
+
+}
+
+.about .swiper-button-prev {
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    background: 0;
+    background: #e35858;
+    border-radius: 4px;
+    transition: all 0.3s;
+
+    .icon {
+        top: 14px;
+        left: 15px;
+        position: absolute;
+        width: 10px;
+        height: 17px;
+        fill: @white;
+        transform: rotate(180deg);
+    }
+
+    &:after {
+        content: "";
+    }
+
+    &:hover {
+        background: @white;
+
+        .icon {
+            fill: #e35858;
+        }
+
+    }
+}
+
+.about .swiper-pagination {
+    bottom: 30px !important;
+}
+
+.about .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    border: 2px solid @white;
+    background: 0;
+    opacity: 1;
+    transition: all 0.3s;
+
+    &:hover {
+        background: @white;
+    }
+
+}
+
+.about .swiper-pagination-bullet-active {
+    background: #d2cfce;
+    border-color: #d2cfce;
+
+    &:hover {
+        background: @white;
+        border-color: @white;
+    }
+
+}
+
+.about .swiper-slide__img {
+    background: 0;
+}
+
+.about-container .swiper-container .swiper-wrapper .swiper-slide,
+.about .swiper-slide__img img {
+    border-radius: 6px 0 0 6px;
+}

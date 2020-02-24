@@ -1,0 +1,30 @@
+mixin about(data)
+    - data = data || {};
+    section.about(class = data.class role = data.role)
+        .about__container.container
+            .row
+                .col-6.pr-0
+                    .about-container
+                        .swiper-container
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .swiper-slide__img
+                                        img(src="../img/about/about-1.jpg" alt="@@")
+                                .swiper-slide
+                                    .swiper-slide__img
+                                        img(src="../img/about/about-1.jpg" alt="@@")
+                                .swiper-slide
+                                    .swiper-slide__img
+                                        img(src="../img/about/about-1.jpg" alt="@@")
+
+                            .swiper-button-prev
+                                svg.icon.clients__list-icon
+                                    use(xlink:href="../img/sprite/sprite.svg#next")
+                            .swiper-button-next
+                                svg.icon.clients__list-icon
+                                    use(xlink:href="../img/sprite/sprite.svg#next")
+                            .swiper-pagination
+                .col-6.px-0
+                    .about__content
+                        h4.about__content-title О компании
+                        p.about__content-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
