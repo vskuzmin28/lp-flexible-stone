@@ -2,7 +2,7 @@
 
 .main {
     padding: 78px 0 52px 0;
-    background: url('../img/main.jpg') no-repeat center;
+    background: #000 url('../img/main.jpg') no-repeat center;
     background-size: cover;
     text-align: center;
     color: @white;
@@ -15,6 +15,7 @@
         padding: 0;
         list-style: none;
         text-align: left;
+        z-index: 999;
 
         &-active {
             position: relative;
@@ -208,4 +209,12 @@
 
     }
 
+}
+
+.black-link {
+    color: #000 !important;
+}
+
+.main__navigation-active {
+    color: #e35858 !important;
 }

@@ -1,8 +1,30 @@
+$(window).scroll(function() {
+  let scroll = $(window).scrollTop();
+  
+  $('.main__navigation li a').each(function() {
+      let elementPositionTop = parseFloat($(this).offset().top) + (parseFloat($(this).height() / 2));
+
+      if (elementPositionTop >= 770 && elementPositionTop <= 1380 || elementPositionTop >= 2130 && elementPositionTop <= 4520 || elementPositionTop >= 5240 && elementPositionTop <= 7520) {
+          $(this).addClass('black-link');
+      } else {
+          $(this).removeClass('black-link');
+      }
+
+  });
+});
+
+$(".main__navigation li a").click(function(e) {
+  e.preventDefault();
+  $(".main__navigation li a").removeClass("main__navigation-active");
+  $(this).closest("a").addClass("main__navigation-active");
+  // here you can close the divs and open the one belonging to the clicked one
+});
+
 $(document).ready(function(){
-    $("nav, .repair__services").on("click","a", function (event) {
+    $(".main__navigation").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
-            top = $(id).offset().top - 70;
+            top = $(id).offset().top - 0;
         $('body,html').animate({scrollTop: top}, 1500);
     });
 });
@@ -14,27 +36,6 @@ $('.header__nav-item a').click(function(e){
   $('.header__button').toggleClass('header__button-active');
   $('.header').toggleClass('header__float-show');
 })
-
-
-
-// float header
-
-function toggleHeader() {
-    var scroll_status = $(document).scrollTop();
-    var ww = $(window).width();
-    if (scroll_status > $(".header").height() && ww > 991) {
-  
-      $(".header").addClass('header_float');
-      $('.header__nav').addClass('header__nav_height');
-    }
-    else {
-      $(".header").removeClass('header_float');
-      $('.header__nav').removeClass('header__nav_height');
-    }
-  }
-  $(document).scroll(function () {
-    toggleHeader();
-  })
 
 $(document).scroll(function () {
   svg4everybody();
@@ -223,51 +224,6 @@ $('.show-btn-brands').click(function (e) {
     $(this).hide();
 });
 
-// map
-
-// ymaps.ready(init);
-
-// function init() {
-//     var myMap = new ymaps.Map("map", {
-//             center: [55.73, 37.75],
-//             zoom: 9,
-//             controls: [],
-            
-//         }, 
-//         {
-//             searchControlProvider: 'yandex#search'
-//         }),
-        
-//         yellowCollection = new ymaps.GeoObjectCollection(null, {
-//             preset: 'islands#yellowIcon'
-//         }),
-//         blueCollection = new ymaps.GeoObjectCollection(null, {
-//             preset: 'islands#blueIcon'
-//         }),
-//         yellowCoords = [[55.73, 37.75], [55.81, 37.75]],
-//         blueCoords = [[55.73, 37.65], [55.81, 37.65]];
-
-//     for (var i = 0, l = yellowCoords.length; i < l; i++) {
-//         yellowCollection.add(new ymaps.Placemark(yellowCoords[i]));
-//     }
-//     for (var i = 0, l = blueCoords.length; i < l; i++) {
-//         blueCollection.add(new ymaps.Placemark(blueCoords[i]));
-//     }
-
-//     myMap.controls.add('zoomControl');
-//     myMap.behaviors.disable('scrollZoom');
-
-//     myMap.geoObjects.add(yellowCollection).add(blueCollection);
-
-//     // Через коллекции можно подписываться на события дочерних элементов.
-//     yellowCollection.events.add('click', function () { alert('Кликнули по желтой метке') });
-//     blueCollection.events.add('click', function () { alert('Кликнули по синей метке') });
-
-//     // Через коллекции можно задавать опции дочерним элементам.
-//     blueCollection.options.set('preset', 'islands#blueDotIcon');
-// }
-
-
 // form
 
 $('.link-skidka').on('click', function() {
@@ -419,21 +375,3 @@ $(function() {
   ymap();
 
 });
-
-let d = new Date();
-
-function formatDate(date) {
-
-  let dd = date.getDate();
-  if (dd < 10) dd = '0' + dd;
-
-  let mm = date.getMonth() + 1;
-  if (mm < 10) mm = '0' + mm;
-
-  let yy = date.getFullYear() % 100;
-  if (yy < 10) yy = '0' + yy;
-
-  return dd + '.' + mm + '.' + yy;
-}
-
-$('.currentDay').html(formatDate(d));

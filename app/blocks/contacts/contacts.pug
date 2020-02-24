@@ -1,38 +1,18 @@
-mixin header(data)
+mixin contacts(data)
     - data = data || {};
-header.header
-        .container
-            .row.header__row
-                .burger
-                    span
-                    span
-                    span
-                .col-lg-3.col-md-3
-
-                    a.header__logo.logo(href="#" title="")
-                        svg.icon.logo__icon
-                            use(xlink:href="../img/sprite/sprite.svg#car")
-                        .logo__content
-                            p.logo__title БТ-ремонт
-                            p.logo__desc Выездной сервис по ремонту крупной бытовой техники
-                .col-lg-6.col-md-12
-                    nav.header__nav
-                        ul.header__nav-list
-                            li.header__nav-item
-                                a(href="#services" title="") Услуги и цены
-                            li.header__nav-item
-                                a(href="#about" title="") О компании
-                            li.header__nav-item
-                                a(href="#masters" title="") Мастера
-                            li.header__nav-item
-                                a(href="#reviews" title="") Отзывы
-                            li.header__nav-item
-                                a(href="#map" title="") Контакты
-
-                .col-lg-3.col-md-12.d-flex.justify-content-end
-
-                    a.header__button.button.button_orange.button_shadow-light.linkCall(href="#" title="") Связаться с нами
-                    a.header__button-call(href="tel:9999999999") 
-                        svg.icon
-                            use(xlink:href="../img/sprite/sprite.svg#telephone")
-                        | 8 800 555 3535
+    section#contacts.contacts(class = data.class role = data.role)
+        .contacts__container.container-fluid
+            .row
+                .col-6.px-0
+                    .ymap-container
+                        .loader.loader-default
+                        #map
+                .col-6.px-0
+                    .contacts__content
+                        h4.contacts__content-title Контакты
+                        p.contacts__content-desc Общество с ограниченной ответственностью
+                        span Адрес: 197110, г. Санкт-Петербург, ул Караваевская 59 помещение 34а
+                        span ИНН: 9999999 <br/> КПП: 99999999
+                        a(href="#" title="") Тел.: +7 (900) 999-99-99
+                        a(href="#" title="") Эл.почта: mail@mail.ru
+                        span.contacts__content-director Генеральный директор: Управляющий
