@@ -9,6 +9,70 @@
         height: 100%;
     }
 
+    &_alt {
+        background: @white;
+
+        .questions__form {
+            padding: 31.5px 0;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .questions__form-body input {
+            height: 33px !important;
+        }
+
+        .questions__form-body textarea {
+            height: 69px !important;
+            margin-bottom: 20px;
+        }
+
+        .questions__form-condition {
+            font-size: 8px;
+            margin-bottom: 0;
+        }
+
+        .questions-alt__preview {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .question-alt__title {
+            margin: 0;
+            margin-bottom: 30px;
+            padding: 0;
+            font-size: 32px;
+            font-family: 'Circe';
+            font-weight: bold;
+            color: @black;
+        }
+
+        .question-alt__desc {
+            position: relative;
+            margin: 0;
+            margin-bottom: 34px;
+            padding: 0;
+            font-size: 16px;
+            font-family: 'Circe';
+            font-weight: normal;
+            color: @black;
+
+            &:after {
+                position: absolute;
+                top: 7px;
+                right: -170px;
+                width: 198px;
+                height: 2px;
+                background: @black;
+                content: '';
+                z-index: 1;
+            }
+
+        }
+
+    }
+
     &__content {
         padding: 250px 0;
 

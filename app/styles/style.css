@@ -1686,6 +1686,59 @@ body *::selection {
 .questions__container {
   height: 100%;
 }
+.questions_alt {
+  background: #fff;
+}
+.questions_alt .questions__form {
+  padding: 31.5px 0;
+  height: auto;
+  border-radius: 6px;
+}
+.questions_alt .questions__form-body input {
+  height: 33px !important;
+}
+.questions_alt .questions__form-body textarea {
+  height: 69px !important;
+  margin-bottom: 20px;
+}
+.questions_alt .questions__form-condition {
+  font-size: 8px;
+  margin-bottom: 0;
+}
+.questions_alt .questions-alt__preview {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.questions_alt .question-alt__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 32px;
+  font-family: 'Circe';
+  font-weight: bold;
+  color: #000;
+}
+.questions_alt .question-alt__desc {
+  position: relative;
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Circe';
+  font-weight: normal;
+  color: #000;
+}
+.questions_alt .question-alt__desc:after {
+  position: absolute;
+  top: 7px;
+  right: -170px;
+  width: 198px;
+  height: 2px;
+  background: #000;
+  content: '';
+  z-index: 1;
+}
 .questions__content {
   padding: 250px 0;
 }
