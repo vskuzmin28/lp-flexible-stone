@@ -1,0 +1,106 @@
+// product
+
+.product {
+    padding: 82px 0 85px 0;
+    background: @white;
+    text-align: center;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 50px;
+        padding: 0;
+        font-size: 32px;
+        font-family: 'Circe';
+        font-weight: bold;
+        color: #25313f;
+    }
+
+    &__list {
+        margin: 0;
+        margin-bottom: 50px;
+        padding: 0;
+        list-style: none;
+
+        &-item {
+            position: relative;
+            height: auto;
+            background: @white;
+            border-radius: 6px;
+            -webkit-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+            -moz-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+            box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
+            transition: all 0.3s;
+
+            &:hover {
+                top: -10px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+                background: #e35858;
+
+                .product__list-link img {
+                    width: 100%;
+                    height: 210px;
+                }
+
+                .product__list-link, .product__list-title {
+                    color: @white;
+                }
+
+            }
+
+        }
+
+        &-link {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            img {
+                margin: 0;
+                display: block;
+                border: 0;
+                border-radius: 6px 6px 0 0;
+            }
+
+        }
+
+        &-title {
+            margin: 27px 0 37px 0;
+            font-size: 16px;
+            font-family: 'Circe';
+            font-weight: normal;
+            color: @black;
+        }
+
+    }
+
+    &__button {
+        padding: 0 66px;
+        display: inline-flex;
+        align-items: center;
+        height: 39px;
+        background: @white;
+        border-radius: 25px;
+        border: 2px solid #e35858;
+        font-size: 12px;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+        font-weight: 800;
+        text-decoration: none;
+        color: #e35858;
+        transition: all 0.3s;
+
+        &:hover {
+            background: #e35858;
+            color: @white;
+            text-decoration: none;
+        }
+
+    }
+
+}
