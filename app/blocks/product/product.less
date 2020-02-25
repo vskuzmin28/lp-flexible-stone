@@ -54,9 +54,18 @@
                 -moz-box-shadow: 4px 0px 68px 0px rgba(0,0,0,0.29);
                 box-shadow: 4px 0px 68px 0px rgba(0,0,0,0.29);
 
+                @media screen and (max-width: 767px) {
+                    position: relative !important;
+                    background: #e35858;
+                    top: 0 ;
+                    width: auto;
+                    color: @white;
+                }
+
                 .product__list-link img {
                     width: 100%;
                     height: 210px;
+
                 }
 
                 .product__list-link, .product__list-title {

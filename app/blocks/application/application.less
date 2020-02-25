@@ -26,6 +26,7 @@
         &-item {
             width: 100%;
             position: relative;
+            transition: all .3s;
 
             &_last {
                 @media screen and (max-width: 1140px) { 
@@ -42,6 +43,15 @@
                 left: 0;
                 position: absolute;
                 width: 103%;
+
+                @media screen and (max-width: 767px) {
+                    position: relative !important;
+                    background: 0;
+                    top: 0 ;
+                    width: auto;
+                    color: @white;
+                    width: 100%;
+                }
 
                 .application__list-preview {
                     width: 100%;

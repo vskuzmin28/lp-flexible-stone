@@ -59,10 +59,28 @@
             .icon {
                 margin: 0 auto;
                 width: 56px;
+
+                @media screen and (max-width: 370px) {
+                    margin-left: -15px;
+                }
+
+                @media screen and (min-width: 990px) and (max-width: 1200px) {
+                    margin-left: -15px;
+                }
+
             }
 
             .icon-right {
                 margin-left: -6px !important;
+
+                @media screen and (max-width: 370px) {
+                    margin-left: -15px !important;
+                }
+
+                @media screen and (min-width: 990px) and (max-width: 1200px) {
+                    margin-left: -15px !important;
+                }
+
             }
 
             &:hover {

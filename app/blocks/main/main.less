@@ -44,10 +44,11 @@
         &-active {
             position: relative;
             color: #e35858 !important;
+            display: inline-block;
 
             &:after {
                 position: absolute;
-                top: 11px;
+                top: 9px;
                 right: -45px;
                 content: '';
                 width: 31px;
@@ -154,6 +155,16 @@
                 background: @white;
                 text-decoration: none;
                 color: @black;
+
+                @media screen and (max-width: 767px) {
+                    padding: 28px 15px;
+                    position: relative !important;
+                    background: #e35858;
+                    top: 0 ;
+                    width: auto;
+                    color: @white;
+                }
+
             }
 
         }
@@ -215,7 +226,7 @@
             margin-bottom: 25px;
 
             @media screen and (max-width: 420px) {
-                width: 280px !important;
+                width: 240px !important;
             }
 
             @media screen and (max-width: 1140px) {
@@ -291,5 +302,15 @@
 
 .main__navigation-active {
     color: #e35858 !important;
+
+    a, a:hover {
+        color: #e35858 !important;
+    }
+
 }
 
+.acitve {
+    a {
+        color: #e35858 !important;
+    }
+}

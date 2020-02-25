@@ -13,19 +13,52 @@ $(window).scroll(function() {
   });
 });
 
-$(".main__navigation li a").click(function(e) {
+
+
+// Cache selectors
+var lastId,
+    topMenu = $(".main__navigation"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+270;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 1500);
   e.preventDefault();
-  $(".main__navigation li a").removeClass("main__navigation-active");
-  $(this).closest("a").addClass("main__navigation-active");
 });
 
-$(document).ready(function(){
-    $(".main__navigation").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top - 0;
-        $('body,html').animate({scrollTop: top}, 1500);
-    });
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("main__navigation-active")
+         .end().filter("[href='#"+id+"']").parent().addClass("main__navigation-active");
+   }                   
 });
 
 $('.header__nav-item a').click(function(e){
@@ -216,39 +249,6 @@ $('.show-btn-brands').click(function (e) {
     $(this).hide();
 });
 
-// form
-
-$('.link-skidka').on('click', function() {
-  $('.input-hidden').val('Скидка 25%');
-});
-
-$('.link-master-one').on('click', function() {
-  $('.input-hidden').val('Мастер 1 - Иван');
-});
-
-$('.link-master-two').on('click', function() {
-  $('.input-hidden').val('Мастер 2 - Иван');
-});
-
-$('.link-master-three').on('click', function() {
-  $('.input-hidden').val('Мастер 3 - Иван');
-});
-
-$('.link-repair-one').on('click', function() {
-  $('.input-hidden').val('Вид работ - ремонт холодильников');
-});
-
-$('.link-repair-two').on('click', function() {
-  $('.input-hidden').val('Вид работ - ремонт стиральных машин');
-});
-
-$('.link-repair-three').on('click', function() {
-  $('.input-hidden').val('Вид работ - ремонт посудомоечных машин');
-});
-
-$('.link-services').on('click', function() {
-  $('.input-hidden').val('Услуги');
-});
 
 //Переменная для включения/отключения индикатора загрузки
 var spinner = $('.ymap-container').children('.loader');
