@@ -1,22 +1,24 @@
 mixin popup(data)
     - data = data || {};
     section.popup(class = data.class, role = data.role)
-        h2.popup__title Есть вопросы? <br/>Свяжитесь с нами, мы Вам перезвоним!
-        a.popup__close(href="#" title="")
-            svg.popup__icon
-                use(xlink:href="../img/sprite/sprite.svg#close")
+        h2.popup__title Связь с нами
+        p.popup__desc Заполните поля ниже чтобы связаться с нами! <br/> мы перезвоним Вам за пять минут!
+        //- a.popup__close(href="#" title="")
+        //-     svg.popup__icon
+        //-         use(xlink:href="../img/sprite/sprite.svg#close")
         form.form.send-form.popup__form(action='/' method='post')
             input.form__input(type="text" name='name' placeholder='Ваше имя' required)
             input.form__input.phone-mask(type="text" name='phone' placeholder='Ваш телефон' required)
             input.input-hidden(type="hidden" name='name' value='')
-            input.form__button.button.button_yellow.button_shadow-light(type='submit' value='Связаться с нами')
-
+            input.form__button.button.button_yellow.button_shadow-light(type='submit' value='Перезвоните мне')
+        p.popup__condition Нажимая кнопку «Перезвоните мне» вы соглашаетесь <br/> на обработку персональных данных.
 
 mixin popupThanks(data)
     - data = data || {};
     section.popup.popupThanks(class = data.class, role = data.role)
-        h2.popup__title Спасибо! <br/> В ближайшее время свяжемся с Вами!
-        a.popup__close(href="#" title="")
-            svg.popup__icon
-                use(xlink:href="../img/sprite/sprite.svg#close")
-        a.popup__link.button.button_yellow.button_shadow-light.close(href="#" title="") Хорошо
+        h2.popup__title.popup__title_small Благодарим Вас за обращение
+        p.popup__desc.popup__desc_small Наш специалист перезвонит Вам в течении 5 минут
+        //- a.popup__close(href="#" title="")
+        //-     svg.popup__icon
+        //-         use(xlink:href="../img/sprite/sprite.svg#close")
+        a.popup__link.button.close(href="#" title="") Хорошо

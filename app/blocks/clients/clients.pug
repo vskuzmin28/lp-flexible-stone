@@ -3,7 +3,7 @@ mixin clients(data)
     section.clients(class = data.class role = data.role)
         .clients__container.container
             .row
-                .col-9
+                .col-xl-9.col-md-12
 
                     .row
                         .col-12
@@ -11,37 +11,37 @@ mixin clients(data)
                             p.clients__desc наши клиенты экономят, при этом получая высокое качество
                     ul.clients__list
                         .row
-                            .col-4
+                            .col-lg-4.col-md-4
                                 li.clients__list-item
                                     svg.icon.clients__list-icon
                                         use(xlink:href="../img/sprite/sprite.svg#putty-knife")
                                     p.clients__list-title Требует минимум клеевой <br/> основы
-                            .col-4
+                            .col-lg-4.col-md-4
                                 li.clients__list-item
                                     svg.icon.clients__list-icon
                                         use(xlink:href="../img/sprite/sprite.svg#debit-card")
                                     p.clients__list-title Гибкая система оплат
-                            .col-4
+                            .col-lg-4.col-md-4
                                 li.clients__list-item
                                     svg.icon.clients__list-icon
                                         use(xlink:href="../img/sprite/sprite.svg#sticker")
                                     p.clients__list-title Гарантия на продукцию
-                            .col-4.col-last 
+                            .col-lg-4.col-last.col-md-4
                                 li.clients__list-item
                                     svg.icon.clients__list-icon
                                         use(xlink:href="../img/sprite/sprite.svg#fast")
                                     p.clients__list-title Изготовление от 4 <br/> рабочих дней
-                            .col-8.col-last 
+                            .col-lg-8.col-last.col-md-8
                                 li.clients__list-item.clients__list-item_last
                                     svg.icon.clients__list-icon
                                         use(xlink:href="../img/sprite/sprite.svg#euro")
                                     p.clients__list-title Экономит ваши средства  за счет простоты подготовки к монтажу, эластичности, универсальности и стоимости самого материала
-                .col-3
+                .col-xl-3.col-md-12
                     .clients__form
                         h3.clients__form-title Бесплатный
                         p.clients__form-desc расчет стоимости гибкого камня,клея и грунтовки
                         form.clients__form-body(action="/" method="post")
-                            input(type="text" placeholder="Ваше имя" required)
-                            input(type="text" placeholder="Ваш телефон" required)
+                            input(type="text" name="name" placeholder="Ваше имя" required)
+                            input(type="text" name="phone" placeholder="Ваш телефон" required)
                             input(type="submit" value="Рассчитать")
                         p.clients__form-condition Нажимая кнопку “Расчитать” Вы соглашаетесь на обработку Вашей персональной информации

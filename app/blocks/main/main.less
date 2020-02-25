@@ -7,6 +7,11 @@
     text-align: center;
     color: @white;
 
+    @media screen and (max-width: 1140px) {
+        background: #000;
+        padding-bottom: 38px;
+    }
+
     &__navigation {
         left: 49px;
         top: 225px;
@@ -16,6 +21,25 @@
         list-style: none;
         text-align: left;
         z-index: 999;
+
+        &_active {
+            display: block !important;
+
+            @media screen and (max-width: 1540px) {
+                display: block;
+                padding: 45px 0 0 45px;
+                top: 40px;
+                left: 0;
+                width: 240px;
+                height: 100%;
+                background: #000;
+            }
+
+        }
+
+        @media screen and (max-width: 1540px) {
+            display: none;
+        }
 
         &-active {
             position: relative;
@@ -64,6 +88,10 @@
         background: @white;
         border-radius: 25px;
 
+        @media screen and (max-width: 1540px) {
+            display: none;
+        }
+
         &-item {
             margin-bottom: 10px;
 
@@ -87,6 +115,13 @@
         font-size: 56px;
         font-family: 'Circe';
         font-weight: bold;
+
+        @media screen and (max-width: 1140px) {
+            font-size: 42px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
     }
 
     &__list {
@@ -102,6 +137,13 @@
             border-radius: 6px 6px 0 0;
             color: @white;
             text-decoration: none;
+
+            @media screen and (max-width: 1540px) {
+                margin-bottom: 20px;
+                background: @white;
+                color: @black;
+                border-radius: 6px;
+            }
 
             &:hover {
                 position: absolute;
@@ -141,6 +183,11 @@
         background: #e35858;
         border-radius: 6px;
 
+        @media screen and (max-width: 1140px) {
+            margin: 0 0px;
+            padding-bottom: 30px;
+        }
+
         &-gift {
             bottom: -51px;
             right: 0;
@@ -148,6 +195,11 @@
             width: 190px;
             height: 130px;
             border-radius: 0 0 6px 0;
+
+            @media screen and (max-width: 1140px) {
+                display: none;
+            }
+
         }
 
         &-title {
@@ -162,6 +214,18 @@
         &-body {
             margin-bottom: 25px;
 
+            @media screen and (max-width: 420px) {
+                width: 280px !important;
+            }
+
+            @media screen and (max-width: 1140px) {
+                width: 320px;
+                margin: 0 auto;
+                padding-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+
             input[type="text"] {
                 margin: 0 6px;
                 padding: 0 30px;
@@ -174,6 +238,11 @@
                 font-family: 'Circe';
                 font-weight: normal;
                 color: @black;
+
+                @media screen and (max-width: 1140px) {
+                    margin-bottom: 15px;
+                }
+
             }
 
             input[type="submit"] {
@@ -213,8 +282,14 @@
 
 .black-link {
     color: #000 !important;
+
+    @media screen and (max-width: 1540px) {
+        color: #fff !important;
+    }
+
 }
 
 .main__navigation-active {
     color: #e35858 !important;
 }
+

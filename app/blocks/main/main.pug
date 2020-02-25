@@ -25,26 +25,26 @@ mixin main(data)
                         svg.icon.main__socials-icon
                             use(xlink:href="../img/sprite/sprite.svg#instagram")
             .row
-                .col-12
+                .col-xl-12
                     h2.main__title Оригинальные интерьерные решения из гибкого камня
             .main__list.row
-                .col-3
-                    a.main__list-item(href="#" title="")
+                .col-xl-3.col-lg-6.col-md-6
+                    a.main__list-item.linkCall(href="#" title="")
                         svg.icon.main__list-icon
                             use(xlink:href="../img/sprite/sprite.svg#durable")
                         p.main__list-content Прочность и <br/> долговечность
-                .col-3
-                    a.main__list-item(href="#" title="")
+                .col-xl-3.col-lg-6.col-md-6
+                    a.main__list-item.linkCall(href="#" title="")
                         svg.icon.main__list-icon
                             use(xlink:href="../img/sprite/sprite.svg#firewall")
                         p.main__list-content Влагостойкость и огнеустойчивость
-                .col-3
-                    a.main__list-item(href="#" title="")
+                .col-xl-3.col-lg-6.col-md-6
+                    a.main__list-item.linkCall(href="#" title="")
                         svg.icon.main__list-icon
                             use(xlink:href="../img/sprite/sprite.svg#nature")
                         p.main__list-content Универсальность в отделке и экологичность
-                .col-3
-                    a.main__list-item(href="#" title="")
+                .col-xl-3.col-lg-6.col-md-6
+                    a.main__list-item.linkCallThx(href="#" title="")
                         svg.icon.main__list-icon
                             use(xlink:href="../img/sprite/sprite.svg#cold")
                         p.main__list-content Высокая устойчивость к низким температурам
@@ -54,6 +54,7 @@ mixin main(data)
                     h3.main__form-title Узнайте стоимость гибкого камня и получите подарок по сезонной акции!
                     form.main__form-body(action="/" metho="post")
                         input(type="text" name="name" placeholder="Ваше имя" required)
-                        input(type="text" name="tel" placeholder="Ваш телефон" required)
+                        input(type="text" name="phone" placeholder="Ваш телефон" required)
+                        input(type="hidden" name="cost" value="Узнайте стоимость и получите подарок")
                         input(type="submit" value="Получить подарок")
                     p.main__form-condition Нажимая на кнопку “получить скидку” - вы даете согласие на обработку персональных данных.

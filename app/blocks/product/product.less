@@ -5,6 +5,11 @@
     background: #fff;
     text-align: center;
 
+    @media screen and (max-width: 1140px) {
+        padding: 40px 0;
+    }
+
+
     &__title {
         margin: 0;
         margin-bottom: 50px;
@@ -21,6 +26,10 @@
         padding: 0;
         list-style: none;
 
+        @media screen and (max-width: 1140px) {
+            margin-bottom: 20px;
+        }
+
         &-item {
             position: relative;
             height: auto;
@@ -30,6 +39,10 @@
             -moz-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
             box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
             transition: all 0.3s;
+
+            @media screen and (max-width: 1540px) {
+                margin-bottom: 30px;
+            }
 
             &:hover {
                 top: -10px;

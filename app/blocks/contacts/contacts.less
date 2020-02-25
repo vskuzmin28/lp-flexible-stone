@@ -4,6 +4,10 @@
     padding-top: 64px;
     background: @white;
 
+    @media screen and (max-width: 1140px) {
+        padding-top: 30px;
+    }
+
     &__title {
         margin: 0;
         margin-bottom: 0px;
@@ -18,6 +22,14 @@
         padding: 194px 68px 0 152px;
         background: #f2f7f9;
         height: 100%;
+
+        @media screen and (max-width: 420px) {
+            padding: 30px 15px !important;
+        }
+
+        @media screen and (max-width: 1140px) {
+            padding: 60px;
+        }
 
         span {
             display: block;
@@ -49,6 +61,7 @@
 
         &-director {
             margin-top: 24px !important;
+            
         }
 
         &-desc {

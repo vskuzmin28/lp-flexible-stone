@@ -3,16 +3,16 @@ mixin contacts(data)
     section#contacts.contacts(class = data.class role = data.role)
         .contacts__container.container-fluid
             .row
-                .col-6.px-0
+                .col-lg-6.px-0.col-md-12
                     .ymap-container
                         .loader.loader-default
                         #map
-                .col-6.px-0
+                .col-lg-6.px-0.col-md-12
                     .contacts__content
                         h4.contacts__content-title Контакты
                         p.contacts__content-desc Общество с ограниченной ответственностью
                         span Адрес: 197110, г. Санкт-Петербург, ул Караваевская 59 помещение 34а
                         span ИНН: 9999999 <br/> КПП: 99999999
-                        a(href="#" title="") Тел.: +7 (900) 999-99-99
-                        a(href="#" title="") Эл.почта: mail@mail.ru
+                        a(href="tel:79999999999" title="") Тел.: +7 (900) 999-99-99
+                        a(href="mailto:mail@mail.ru" title="") Эл.почта: mail@mail.ru
                         span.contacts__content-director Генеральный директор: Управляющий

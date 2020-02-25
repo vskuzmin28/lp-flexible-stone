@@ -5,6 +5,17 @@
     padding-top: 80px;
     background: @white;
 
+    @media screen and (max-width: 1140px) {
+        padding-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    &__container {
+        @media screen and (max-width: 1140px) {
+            padding: 0 30px;
+        }
+    }
+
     &__title {
         margin: 0;
         margin-bottom: 0px;
@@ -19,6 +30,10 @@
         padding: 109px 68px 98px;
         background: #f2f7f9;
         height: 92.5%;
+
+        @media screen and (max-width: 1140px) {
+            padding: 30px;
+        }
 
         &-title {
             margin: 0;
@@ -41,6 +56,11 @@
 
     .swiper-container {
         margin-bottom: 30px;
+
+        @media screen and (max-width: 1140px) {
+            margin-bottom: 20px;
+        }
+
     }
 
 }
@@ -142,6 +162,11 @@
 
 .about .swiper-slide__img {
     background: 0;
+
+    img {
+        width: 100%;
+    }
+
 }
 
 .about-container .swiper-container .swiper-wrapper .swiper-slide,

@@ -4,6 +4,11 @@
     background: url('../img/clients.jpg') no-repeat center;
     background-size: cover;
 
+    @media screen and (max-width: 1140px) {
+        background: #000;
+        padding-bottom: 40px;
+    }
+
     &__title {
         margin: 0;
         margin: 81px 0 6px 0;
@@ -12,6 +17,11 @@
         font-family: 'Circe';
         font-weight: bold;
         color: @white;
+
+        @media screen and (max-width: 1140px) {
+            margin-top: 40px;
+        }
+
     }
 
     &__desc {
@@ -22,6 +32,11 @@
         font-family: 'Circe';
         font-weight: normal;
         color: @white;
+
+        @media screen and (max-width: 1140px) {
+            margin-bottom: 30px;
+        }
+
     }
 
     &__list {
@@ -29,12 +44,17 @@
         padding: 0;
         list-style: none;
 
-        .col-4, .col-8 {
-            margin-bottom: 30px;
+        .col-lg-4, .col-lg-8 {
+            margin-bottom: 30px !important;
         }
 
         .col-last {
-            margin-bottom: 91px;
+            margin-bottom: 91px !important;
+
+            @media screen and (max-width: 1140px) {
+                margin-bottom: 40px;
+            }
+
         }
 
         &-item {
@@ -51,6 +71,12 @@
             -moz-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
             box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
             transition: all 0.3s;
+
+            &_tablet {
+                @media screen and (max-width: 1140px) {
+                    height: 104.5%;
+                }
+            }
 
             &:hover {
                 background: #e35858;
@@ -115,6 +141,11 @@
         -moz-box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
         box-shadow: 4px 0px 21px 0px rgba(0,0,0,0.29);
 
+        @media screen and (max-width: 1140px) {
+            padding: 30px 0;
+            border-radius: 4px;
+        }
+
         &-title {
             margin: 0;
             padding: 0;
@@ -135,6 +166,12 @@
         }
 
         &-body {
+
+            @media screen and (max-width: 1140px) {
+                margin: 0 auto;
+                width: 320px;
+            }
+
             input[type="text"] {
                 margin: 0 6px;
                 margin-bottom: 17px;
@@ -180,6 +217,12 @@
             font-size: 12px;
             font-family: 'Circe';
             font-weight: normal;
+
+            @media screen and (max-width: 1140px) {
+                width: 50%;
+                margin: 0 auto;
+            }
+
         }
 
     }

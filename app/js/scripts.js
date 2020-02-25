@@ -17,7 +17,6 @@ $(".main__navigation li a").click(function(e) {
   e.preventDefault();
   $(".main__navigation li a").removeClass("main__navigation-active");
   $(this).closest("a").addClass("main__navigation-active");
-  // here you can close the divs and open the one belonging to the clicked one
 });
 
 $(document).ready(function(){
@@ -44,9 +43,7 @@ $(document).scroll(function () {
 // sliders
 
 $(document).ready(function () {
-  //initialize swiper when document ready
   let mySwiper = new Swiper ('.about-container', {
-    // Optional parameters
     slidesPerView: 1,
     spaceBetween: 0,
     autoHeight: true,
@@ -87,9 +84,7 @@ $(document).ready(function () {
 });
 
   $(document).ready(function () {
-    //initialize swiper when document ready
     let mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
       slidesPerView: 1,
       spaceBetween: 0,
       autoHeight: true,
@@ -133,7 +128,6 @@ $(document).ready(function () {
     var swiperPrev = document.querySelector('.swiper-button-prev');
     var swiperNext = document.querySelector('.swiper-button-next');
     if ( window.innerWidth > 450 ) {
-      //console.log('Success', window.innerWidth);
       swiperPrev.style.display = 'block';
       swiperNext.style.display = 'block';
     } else {
@@ -144,7 +138,6 @@ $(document).ready(function () {
 
   $('.repair__slider').each(function(){
     let swiper = new Swiper('.repair__slider', {
-        // Optional parameters
         direction: 'vertical',
         slidesPerView: 1,
         spaceBetween: 30,
@@ -154,7 +147,6 @@ $(document).ready(function () {
             el: '.swiper-pagination',
             clickable: true,
             },
-            //effect: 'fade',
     })
 });
 
@@ -191,7 +183,7 @@ $('.linkCall').click(function(e){
 $('.linkCallThx').click(function(e){
     e.preventDefault();
 	$('.popupThanks').bPopup({
-        closeClass:'popup__close',
+        closeClass:'close',
         amsl: 0
     })
 })
@@ -203,7 +195,7 @@ $(document).ready(function () {
 
 $('.burger').click(function () {
     $(this).toggleClass('active');
-    $('.header__nav').toggleClass('header__nav-active');
+    $('.main__navigation').toggleClass('main__navigation_active');
     $('.header__button').toggleClass('header__button-active');
     $('.header').toggleClass('header__float-show');
 });

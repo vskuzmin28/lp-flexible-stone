@@ -5,6 +5,11 @@
     background: @white;
     text-align: center;
 
+    @media screen and (max-width: 1140px) {
+        padding: 40px 0;
+        padding-bottom: 0;
+    }
+
     &__title {
         margin: 0;
         margin-bottom: 50px;
@@ -13,6 +18,11 @@
         font-family: 'Circe';
         font-weight: bold;
         color: @black;
+
+        @media screen and (max-width: 1140px) {
+            margin-bottom: 20px;
+        }
+
     }
 
     &__list {
