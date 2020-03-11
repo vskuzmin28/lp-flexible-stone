@@ -3,11 +3,11 @@ mixin contacts(data)
     section#contacts.contacts(class = data.class role = data.role)
         .contacts__container.container-fluid
             .row
-                .col-lg-6.px-0.col-md-12
+                .col-lg-6.px-0.col-md-12.order-md-first.order-last
                     .ymap-container
                         .loader.loader-default
                         #map
-                .col-lg-6.px-0.col-md-12
+                .col-lg-6.px-0.col-md-12.order-md-last.order-first
                     .contacts__content
                         h4.contacts__content-title Контакты
                         p.contacts__content-desc Общество с ограниченной ответственностью

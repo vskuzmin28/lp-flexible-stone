@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=320, initial-scale=1"/>
-    <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png"/>
-    <link rel="manifest" href="../img/site.webmanifest"/>
-    <link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5"/>
+    <!-- link(rel="apple-touch-icon", sizes="60x60", href="../img/apple-touch-icon.png")-->
+    <!-- link(rel="icon", type="image/png", sizes="32x32", href="../img/favicon-32x32.png")-->
+    <!-- link(rel="icon", type="image/png", sizes="16x16", href="../img/favicon-16x16.png")-->
+    <!-- link(rel="manifest", href="../img/site.webmanifest")-->
+    <!-- link(rel="mask-icon", href="../img/safari-pinned-tab.svg", color="#5bbad5")-->
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="theme-color" content="#ffffff"/>
     <!-- htmlbuild:css -->
@@ -32,10 +32,13 @@
     <section class="main">
       <div class="main__container container">
         <ul class="main__navigation">
-          <li class="main__navigation-item"><a href="#product" title="">Продукция</a></li>
-          <li class="main__navigation-item"><a href="#stone" title="">Гибкий камень</a></li>
-          <li class="main__navigation-item"><a href="#about" title="">О нас</a></li>
-          <li class="main__navigation-item"><a href="#contacts" title="">Контакты</a></li>
+          <li class="main__navigation-item"><a href="#product" title="">
+               Продукция<span></span></a></li>
+          <li class="main__navigation-item"><a href="#stone" title="">Гибкий камень<span></span></a></li>
+          <li class="main__navigation-item"><a href="#about" title="">
+               О нас<span></span></a></li>
+          <li class="main__navigation-item"><a href="#contacts" title="">
+               Контакты<span></span></a></li>
         </ul>
         <ul class="main__socials">
           <li class="main__socials-item"><a href="#" title="">
@@ -348,7 +351,7 @@
     <section class="questions">
       <div class="questions__container container">
         <div class="row">
-          <div class="col-lg-5 px-0 col-md-12">
+          <div class="col-lg-5 px-0 col-md-12 order-md-first order-last">
             <div class="questions__form">
               <form class="questions__form-body" action="/" method="post">
                 <input type="text" name="name" placeholder="Ваше имя" required="required"/>
@@ -361,7 +364,7 @@
               <p class="questions__form-condition">Нажимая кнопку “Расчитать” Вы соглашаетесь на обработку Вашей персональной информации</p>
             </div>
           </div>
-          <div class="col-lg-7 px-0 col-md-12">
+          <div class="col-lg-7 px-0 col-md-12 order-md-last order-first">
             <div class="questions__content">
               <h3 class="questions__content-title">Задайте вопрос напрямую руководителям компании каменный остров</h3>
             </div>
@@ -490,13 +493,13 @@
     <section class="contacts" id="contacts">
       <div class="contacts__container container-fluid">
         <div class="row">
-          <div class="col-lg-6 px-0 col-md-12">
+          <div class="col-lg-6 px-0 col-md-12 order-md-first order-last">
             <div class="ymap-container">
               <div class="loader loader-default"></div>
               <div id="map"></div>
             </div>
           </div>
-          <div class="col-lg-6 px-0 col-md-12">
+          <div class="col-lg-6 px-0 col-md-12 order-md-last order-first">
             <div class="contacts__content">
               <h4 class="contacts__content-title">Контакты</h4>
               <p class="contacts__content-desc">Общество с ограниченной ответственностью</p><span>Адрес: 197110, г. Санкт-Петербург, ул Караваевская 59 помещение 34а</span><span>ИНН: 9999999 <br/> КПП: 99999999</span><a href="tel:79999999999" title="">Тел.: +7 (900) 999-99-99</a><a href="mailto:mail@mail.ru" title="">Эл.почта: mail@mail.ru</a><span class="contacts__content-director">Генеральный директор: Управляющий</span>

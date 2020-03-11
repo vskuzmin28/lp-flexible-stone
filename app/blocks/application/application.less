@@ -26,7 +26,7 @@
         &-item {
             width: 100%;
             position: relative;
-            transition: all .3s;
+            transition: .3s;
 
             &_last {
                 @media screen and (max-width: 1140px) { 
@@ -39,10 +39,11 @@
             }
 
             &:hover {
-                top: -10px;
-                left: 0;
-                position: absolute;
-                width: 103%;
+                transform: scale(1.11);
+
+                @media screen and (max-width: 767px) {
+                    transform: scale(1);
+                }
 
                 @media screen and (max-width: 767px) {
                     position: relative !important;
@@ -62,6 +63,8 @@
                 }
 
                 .application__list-body {
+                    transition: all .3s;
+                    width: 80%;
                     bottom: 47px;
                     left: 47px;
                 }

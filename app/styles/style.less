@@ -31,13 +31,16 @@ a, input, textarea {
 
 // body
 
-body {
 
+
+body {
   margin: 0;
   background: @white;
 	cursor: default;
   overflow-x: hidden;
 }
+
+
 
 // selection
 
@@ -57,7 +60,7 @@ body *::selection {
 }
 
 .burger {
-  z-index: 40;
+  z-index: 990;
   position: absolute;
   top: 9px;
   right: 25px;
@@ -118,7 +121,7 @@ body *::selection {
   display: none;
 
   @media screen and (max-width: 1540px) {
-    top: 0;
+    top: -2px;
     display: block;
     position: fixed;
     width: 100%;
